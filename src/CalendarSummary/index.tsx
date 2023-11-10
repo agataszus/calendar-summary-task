@@ -1,7 +1,5 @@
 import React from "react";
-import { getCalendarEvents } from "../api-client";
 import CalendarSummaryTable from "../CalendarSummaryTable";
-
 
 const CalendarSummary: React.FunctionComponent = () => {
   return (
