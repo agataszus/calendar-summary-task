@@ -1,0 +1,38 @@
+// colors
+$color-primary: rgb(0, 136, 36);
+$color-primary-light: rgb(158, 216, 99);
+$color-primary-dark: rgb(12, 33, 5);
+$color-primary-opaque: rgba(2, 175, 61, 0.06);
+$color-neutral-dark: rgb(22, 22, 22);
+$color-neutral: rgb(217, 217, 217);
+$color-neutral-light: rgb(255, 255, 255);
+
+// spacing
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$space-8: 32px;
+$space-9: 36px;
+$space-12: 48px;
+
+// font-family
+$font-family: Inter;
+
+// font-weight
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+// font-size
+$font-size-large: 18px;
+$font-size-medium: 14px;
+$font-size-small: 12px;
+
+// Layout constants
+$max-container-width: 1000px;
+
+// breakpoints
+$mobile-breakpoint: 767px;

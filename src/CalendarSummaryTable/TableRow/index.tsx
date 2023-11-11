@@ -1,22 +1,19 @@
-import { CalendarSummaryItem } from "../../services/calendar-summary";
-import { parseDate } from "../helpers";
+import React, { PropsWithChildren } from "react";
+import styles from "./index.module.scss";
 
 type TableRowProps = {
-  calendarSummaryItem: CalendarSummaryItem;
-};
+  isAccent: boolean;
+} & PropsWithChildren;
 
-const TableRow = ({ calendarSummaryItem }: TableRowProps) => {
-  const { date, numberOfEvents, totalDuration, longestEvent } =
-    calendarSummaryItem;
-
-  const parsedDate = parseDate(date);
-
+const TableRow: React.FunctionComponent<TableRowProps> = ({
+  children,
+  isAccent,
+}) => {
   return (
-    <tr>
-      <td>{parsedDate}</td>
-      <td>{numberOfEvents}</td>
-      <td>{totalDuration}</td>
-      <td>{longestEvent}</td>
+    <tr
+      className={`${styles.container} ${isAccent && styles.backgroundAccent}`}
+    >
+      {children}
     </tr>
   );
 };

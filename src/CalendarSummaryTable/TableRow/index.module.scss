@@ -1,0 +1,10 @@
+@import "../../styles/variables";
+
+.container {
+  height: $space-12;
+  text-align: left;
+}
+
+.backgroundAccent {
+  background-color: $color-primary-opaque;
+}

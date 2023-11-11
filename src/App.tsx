@@ -1,12 +1,13 @@
-import React from 'react';
-import './App.css';
-import CalendarSummary from './CalendarSummary';
+import React from "react";
+import "./styles/_global.scss";
+import CalendarSummary from "./CalendarSummary";
+import Layout from "./Layout";
 
 function App() {
   return (
-    <div className="App" style={{ maxWidth: '1000px', margin: 'auto', padding: "0 1rem" }}>
+    <Layout>
       <CalendarSummary />
-    </div>
+    </Layout>
   );
 }
 

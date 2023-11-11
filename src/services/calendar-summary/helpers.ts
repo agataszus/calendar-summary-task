@@ -19,10 +19,11 @@ export const getCalendarSummaryForDate = async (
     0
   );
 
-  const [{ title: longestEvent, durationInMinutes: longestEventDuration }] =
-    events.sort(
-      (eventA, eventB) => eventB.durationInMinutes - eventA.durationInMinutes
-    );
+  const [{ title: longestEvent, durationInMinutes: longestEventDuration }] = [
+    ...events,
+  ].sort(
+    (eventA, eventB) => eventB.durationInMinutes - eventA.durationInMinutes
+  );
 
   return {
     date,
@@ -33,7 +34,9 @@ export const getCalendarSummaryForDate = async (
   };
 };
 
-export const calculateCalendarSummaryTotal = (summaryList: CalendarSummaryList) => {
+export const calculateCalendarSummaryTotal = (
+  summaryList: CalendarSummaryList
+) => {
   const { numberOfEvents, totalDuration } = summaryList.reduce(
     (total, item) => ({
       numberOfEvents: total.numberOfEvents + item.numberOfEvents,
@@ -45,7 +48,7 @@ export const calculateCalendarSummaryTotal = (summaryList: CalendarSummaryList) 
     }
   );
 
-  const [{ longestEvent }] = summaryList.sort(
+  const [{ longestEvent }] = [...summaryList].sort(
     (summaryA, summaryB) =>
       summaryB.longestEventDuration - summaryA.longestEventDuration
   );

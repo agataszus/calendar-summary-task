@@ -1,0 +1,21 @@
+@import "./variables";
+
+body {
+  min-height: 100vh;
+  font-family: Inter, sans-serif;
+  width: 100%;
+  background: radial-gradient(
+    circle at 65% 43%,
+    $color-primary-light 0%,
+    $color-primary 87%
+  );
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.heading {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-dark;
+  width: 20%;
+  padding: 0 $space-2;
+  border-bottom: 1px solid $color-neutral;
+
+  @include mobile {
+    padding: 0 $space-4;
+    width: 22.5%;
+  }
+}
+
+.headingWide {
+  width: 40%;
+}
+
+.headingNarrow {
+  @include mobile {
+    width: 15%;
+    padding: 0 $space-4;
+  }
+}

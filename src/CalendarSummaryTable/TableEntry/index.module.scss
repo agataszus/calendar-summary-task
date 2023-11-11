@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.entry {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  color: $color-neutral-dark;
+  padding: 0 $space-2;
+
+  @include mobile {
+    padding: 0 $space-4;
+  }
+}

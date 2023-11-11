@@ -1,0 +1,15 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.table {
+  padding-top: $space-9;
+  border-spacing: 0;
+
+  @include mobile {
+    width: 800px;
+  }
+}
+
+.summaryEntryOdd {
+  background-color: $color-primary-opaque;
+}

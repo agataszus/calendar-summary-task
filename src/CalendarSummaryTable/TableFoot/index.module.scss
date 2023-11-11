@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.heading {
+  font-size: $font-size-small;
+  font-weight: $font-weight-semibold;
+  color: $color-neutral-dark;
+  padding: 0 $space-2;
+
+  @include mobile {
+    padding: 0 $space-4;
+  }
+}
+
+.entry {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  color: $color-neutral-dark;
+  padding: 0 $space-2;
+
+  @include mobile {
+    padding: 0 $space-4;
+  }
+}
