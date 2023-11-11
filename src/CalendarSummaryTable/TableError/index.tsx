@@ -7,7 +7,7 @@ type TableErrorProps = {
 
 const TableError: React.FunctionComponent<TableErrorProps> = ({ onRetry }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} role="alert">
       <h3 className={styles.heading}>
         There was a problem with loading calendar events.
       </h3>

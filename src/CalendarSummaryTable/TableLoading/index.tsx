@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 
 const TableLoading: React.FunctionComponent = () => {
   return (
-    <tbody>
+    <tbody data-testid="loading">
       {Array.from(Array(UPCOMING_DAYS_NUMBER + 1).keys())?.map((item) => (
         <TableRow isAccent={item % 2 === 1} key={`table-loading-row-${item}`}>
           {Array.from(Array(4).keys()).map((column) => (
