@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc($space-12 * 8);
+}
+
+.heading {
+  font-size: $font-size-large;
+  font-weight: $font-weight-semibold;
+  color: $color-primary-dark;
+  margin: 0;
+  text-align: center;
+}
+
+.button {
+  background-color: $color-primary;
+  outline: none;
+  border: 0;
+  color: $color-neutral-light;
+  padding: $space-3 $space-6;
+  border-radius: $space-1;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semibold;
+}

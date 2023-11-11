@@ -34,17 +34,19 @@ const CalendarSummaryTable: React.FunctionComponent = () => {
   }, [handleFetchCalendarSummary]);
 
   return (
-    <table className={styles.table}>
-      <TableHead />
-      {isLoading && <TableLoading />}
-      {isError && <TableError />}
-      {calendarSummary && (
-        <>
-          <TableBody summaryList={calendarSummary.summaryList} />
-          <TableFoot calendarSummaryTotal={calendarSummary.total} />
-        </>
-      )}
-    </table>
+    <>
+      <table className={styles.table}>
+        <TableHead />
+        {isLoading && <TableLoading />}
+        {calendarSummary && (
+          <>
+            <TableBody summaryList={calendarSummary.summaryList} />
+            <TableFoot calendarSummaryTotal={calendarSummary.total} />
+          </>
+        )}
+      </table>
+      {isError && <TableError onRetry={handleFetchCalendarSummary} />}
+    </>
   );
 };
 
