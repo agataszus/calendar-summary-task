@@ -6,14 +6,27 @@ import styles from "./index.module.scss";
 import TableHead from "./TableHead";
 import TableFoot from "./TableFoot";
 import TableBody from "./TableBody";
+import TableLoading from "./TableLoading";
+import TableError from "./TableError";
 
 const CalendarSummaryTable: React.FunctionComponent = () => {
   const [calendarSummary, setCalendarSummary] = useState<CalendarSummaryData>();
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleFetchCalendarSummary = useCallback(async () => {
-    const calendarSummary = await fetchCalendarSummary();
+    setIsLoading(true);
+    setIsError(false);
 
-    setCalendarSummary(calendarSummary);
+    try {
+      const calendarSummary = await fetchCalendarSummary();
+
+      setCalendarSummary(calendarSummary);
+    } catch {
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -23,6 +36,8 @@ const CalendarSummaryTable: React.FunctionComponent = () => {
   return (
     <table className={styles.table}>
       <TableHead />
+      {isLoading && <TableLoading />}
+      {isError && <TableError />}
       {calendarSummary && (
         <>
           <TableBody summaryList={calendarSummary.summaryList} />

@@ -4,6 +4,7 @@
 .table {
   padding-top: $space-9;
   border-spacing: 0;
+  width: 100%;
 
   @include mobile {
     width: 800px;
