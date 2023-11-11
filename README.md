@@ -1,5 +1,11 @@
 # Megaron S.A. — take-home recruitment task
 
+Task submission by Agata Szustkiewicz.
+
+<img width="1680" alt="image" src="https://github.com/agataszus/calendar-summary-task/assets/122212953/a96fc7e2-9791-4a92-8fe8-873b54267e92">
+
+## Task description
+
 Hello and thank you for your interest in joining our team!
 
 We've prepared a very brief development challenge designed to test your proficiency in the basics of JavaScript, TypeScript and React.
