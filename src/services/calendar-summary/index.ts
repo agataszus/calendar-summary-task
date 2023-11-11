@@ -6,6 +6,11 @@ import {
 } from "./helpers";
 import { CalendarSummaryData } from "./types";
 
+/**
+ * Function that fetches and calculates summaries of calendar events
+ * for the next 7 days. It returns list of summaries for each day and
+ * total summary of all days.
+ */
 const fetchCalendarSummary = async (): Promise<CalendarSummaryData> => {
   const currentDate = new Date();
   const upcomingDaysIndices = Array.from(Array(UPCOMING_DAYS_NUMBER).keys());

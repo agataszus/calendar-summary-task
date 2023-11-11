@@ -9,6 +9,11 @@ export const addDays = (date: Date, numberOfDays: number) => {
   return newDate;
 };
 
+/**
+ * Function that fetches events for a given day and calculates
+ * summary for each event property.
+ * @param date date for a given day
+ */
 export const getCalendarSummaryForDate = async (
   date: Date
 ): Promise<CalendarSummaryItem> => {
@@ -34,6 +39,11 @@ export const getCalendarSummaryForDate = async (
   };
 };
 
+/**
+ * Function that calculates total summary for a list of summaries
+ * returned by `getCalendarSummaryForDate`
+ * @param summaryList list of items returned by multiple `getCalendarSummaryForDate` calls
+ */
 export const calculateCalendarSummaryTotal = (
   summaryList: CalendarSummaryList
 ) => {
